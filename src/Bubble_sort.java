@@ -9,12 +9,11 @@ public class Bubble_sort
 		System.out.println(Arrays.toString(a));
 	}
 	static void Swap(int [] arr, int a){
-		if(arr[a]>arr[a+1]){
 			int temp= arr[a];
 			arr[a]=arr[a+1];
 			arr[a+1]=temp;
 
-		}
+
 	}
 	//li = last index in unsorted array
 	//ci= current  limit after the single pass

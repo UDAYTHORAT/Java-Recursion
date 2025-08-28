@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class LineraSearch {
     public static void main(String[] args) {
-        int[] a = {1, 5, 3,42, 13, 12, 42};
+        int[] a = {1, 5, 3, 13, 12, 42};
         int target = 42;
         ArrayList<Integer> list=new ArrayList<>();
         Search(a, target, 0);
@@ -14,6 +14,7 @@ public class LineraSearch {
 
         System.out.println(Search4(a,target,0));
 
+        System.out.println(Search1(a,target,0));
 
     }
 

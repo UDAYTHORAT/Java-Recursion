@@ -17,13 +17,22 @@ public class Rotated_binary_Search {
         if(a[mid]==target){
             return mid;
         }
+
         if(a[start]<=a[mid]) {
+            // then you are in the rotated part of the array the left sorted part --> [5,6] part of the array.
+            //the array could be big like it could be --> [5,6,7,8,9,10,11]-->and the target is ->8
+            // then it says that if your start ->[5] is smaller than the a[mid] lets say it is->[10]
+            // then you are in the left sorted array.
             if (target < a[mid] && target >= a[start]) {
+                //if the target is less than the a[mid]->[10] and greater or equal to the start then search as
+                // follows-->
                 return BinarySearch(a, target, start, mid - 1);
             } else {
                 return BinarySearch(a, target, mid + 1, end);
             }
         }
+        // if you are  in the right sorted part like  start[5] > a[mid][1] --> [5,6,1,2,3,4]
+        // then if the mid is [1]  so the search space is [1,2,3,4] is the target lies there-->
             if(target>a[mid] && target<=a[end]){
                 return BinarySearch(a,target,mid+1,end);
             }else {
